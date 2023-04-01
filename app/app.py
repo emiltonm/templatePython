@@ -4,7 +4,11 @@ import sys
 sys.path.append(str(Path(__file__).parent.parent))
 from models.environment import Environment
 from models.gsetters import GSetters
+from models.messages import Messages
 
+msg=Messages()
+
+msg.print('info','Iniciando el programa...')
 
 class persona(GSetters):
     __nombre: str = "EmiltonX"
@@ -36,3 +40,4 @@ class animal(Environment):
         print(self.__age)
 
 y=animal()
+msg.print('info','Terminando el programa...')
