@@ -101,6 +101,24 @@ print(x.get("__port"))
 x.set("__port",27017)
 print(x.get("__port"))
 ```
+
+# Modulo messages
+Este modulo se encarga de enviar mensajes a pantalla y guardarlos en un archivo log general, los mensajes estan dividirse en diferentes tipos y cada tipo de mensaje tiene su propia configuracion de color y archivo log si asi se requiere ejemplo:
+```
+msg = Messages()
+msg.print('success', 'mensaje de prueba')
+```
+existen varios tipos de mensajes predefinidos: normal, success, info, warning, error
+
+se puede agregar mas tipos con el método add_type o remover con el método remove_type
+
+se puede activar un archivo log individual para cada tipo de mensaje cambiando el valor de log a True
+con el método change_log_type
+
+se puede activar o desactivar la impresion en pantalla de un tipo de mensaje cambiando el valor de screen a True o False con el método change_screen_type
+
+se puede desactivar el general.log cambiando el valor de general_log a False con el método deactivate_general_log o reactivar con el método activate_general_log
+
 # Modulo x
 Nota: _configurar el modulo data a traves del archivo .env.x_
 Este modulo se encarga de...
