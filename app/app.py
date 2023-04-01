@@ -2,8 +2,8 @@ from pathlib import Path
 import sys
 
 sys.path.append(str(Path(__file__).parent.parent))
-from modelos.environment import Environment
-from modelos.gsetters import GSetters
+from models.environment import Environment
+from models.gsetters import GSetters
 
 
 class persona(GSetters):
