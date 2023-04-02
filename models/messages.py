@@ -72,7 +72,7 @@ class Messages:
                     f.write(f'[{fecha}]{message}\n')
             if self.__general_log:
                 with open(self.__full_path/self.__file_general_log, 'a') as f:
-                    f.write(f'[{fecha}]{message}\n')
+                    f.write(f'[{type}][{fecha}]{message}\n')
 
     def show_messages(self, type: str):
         if type in self.message_types:
@@ -100,3 +100,5 @@ class Messages:
     
     def deactivate_general_log(self):
         self.__general_log = False
+
+msg = Messages()
